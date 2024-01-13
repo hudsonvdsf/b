@@ -52,6 +52,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin !important;
 }
 
 a { text-decoration: none; }
@@ -72,6 +73,7 @@ span { display: inline-block; }
 html {
   font-family: "Poppins", sans-serif;
   overscroll-behavior: contain;
+  scrollbar-width: thin !important;
 }
 
 input {
@@ -82,13 +84,16 @@ input {
 
 input::placeholder { font: inherit; }
 
-body { background: var(--white); }
+body { 
+  background: var(--white);
+  scrollbar-width: thin !important;   
+     }
 
 /**
  * scrollbar style
  */
 
-body::-webkit-scrollbar { width: 15px; }
+body::-webkit-scrollbar { width: 2px; }
 
 body::-webkit-scrollbar-track {
   background: var(--white);
@@ -111,13 +116,13 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 .has-scrollbar { padding-bottom: 5px; }
 
 .has-scrollbar::-webkit-scrollbar {
-  width: 12px; /* for vertical scroll */
-  height: 12px; /* for horizontal scroll */
+  width: 2px; /* for vertical scroll */
+  height: 2px; /* for horizontal scroll */
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
   background: transparent;
-  border: 3px solid var(--white);
+  border: 2px solid var(--white);
   border-radius: 20px;
 }
 
